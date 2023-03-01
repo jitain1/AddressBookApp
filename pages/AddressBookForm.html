@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Style Sheet is linked-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/AddressBookForm.css">
+    <title>Address Book Form</title>
+</head>
+
+<body>
+    <!--Creating a header for Address Book Form UI
+        Address book logo added-->
+    
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/images/logo.png" alt="">
+            <div>
+                <span class="address-text">Address</span><br>
+                <span class="address-text address-book">Book</span><br>
+            </div>
+        </div>
+    </header>
+    
+    <div class="form-content">
+        <div class="form-head">
+            <span> PERSON ADDRESS FORM </span>
+            <span id="img"><a href="../pages/HomePage.html" class="cancel-button"><img src="../assets/icons/cancel.png"
+                        height="30" width="30" alt=""></a></span>
+        </div>
+        
+        <form class="form" action="#" onsubmit="save(event)" onreset="resetForm()">
+            <label class="label text" for="name">Full Name</label>
+            <div class="row-content">
+                <input class="input" type="text" id="name" name="name" placeholder="Enter Name" required>
+                <error-output class="name-error" for="name"></error-output>
+            </div>
+
+            <label class="label text" for="phone">Phone Number</label>
+            <div class="row-content">
+                <input class="input" type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required>
+                <error-output class="phone-error" for="phone"></error-output>
+            </div>
+
+            <label class="label text" for="address">Address</label>
+            <div class="row-content">
+                <textarea class="input" name="address" id="address" rows="4" placeholder="Enter Address"></textarea>
+                <error-output class="address-error" for="address"></error-output>
+            </div>
+
+            <div class="row">
+                <div class="input-content">
+                    <label class="label text" for="state">State</label>
+                    <div class="row-content">
+                        <select class="input" name="state" id="state">
+                            <option value="">State</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="chattisgarh">chattisgarh</option>
+                            <option value="punjab">punjab</option>
+                            <option value="Madhyapradesh">Madhyapradesh</option>
+                            <option value="UttarPradesh">UttarPradesh</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="TamilNadu">TamilNadu</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-content">
+                    <label class="label text" for="city">City</label>
+                    <div class="row-content">
+                      <select class="input" name="city" id="city">
+                        <option value="">City</option>
+                      </select>
+                    </div>
+                  </div>
+                <div class="input-content">
+                    <label class="label text" for="zip">ZipCode</label>
+                    <div class="row-content">
+                        <input class="input" type="text" id="zip" name="zip" placeholder="Enter Zip Code" required>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonParent">
+                <div class="add-reset">
+                    <button type="submit" class="button addButton" id="addButton">Add</button>
+                    <button type="reset" class="resetButton button" id="resetButton">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="../js/AddressBookForm.js"></script>
+    <script type="text/javascript" src="../js/AddressBookContact.js"></script>  
+    <script type="text/javascript" src="../js/SiteProperties.js"></script> 
+</body>
+
+</html>
